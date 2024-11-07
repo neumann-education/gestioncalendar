@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Calendarios Neumann</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5fa;
+            color: #333;
+        }
+
+        /* Encabezado */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6A1B9A;
+            padding: 40px 20px;
+            border-bottom: 3px solid #AB47BC;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container h1 {
+            color: #FFF;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjetas */
+        .game-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .game-card h2 {
+            font-size: 1.5em;
+            color: #6A1B9A;
+            margin: 10px 0 20px;
+        }
+
+        .game-card p {
+            font-size: 0.95em;
+            color: #555;
+            padding: 0 10px;
+            line-height: 1.6;
+        }
+
+        /* Botones */
+        .game-card button {
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 80%;
+            align-self: center;
+        }
+
+        .button-crud {
+            background-color: #8E24AA;
+            color: white;
+        }
+
+        .button-crud:hover {
+            background-color: #6A1B9A;
+            box-shadow: 0 4px 10px rgba(106, 27, 154, 0.4);
+        }
+
+        .button-calendar {
+            background-color: #FF7043;
+            color: white;
+        }
+
+        .button-calendar:hover {
+            background-color: #E64A19;
+            box-shadow: 0 4px 10px rgba(230, 74, 25, 0.4);
+        }
+
+        /* Iconos estilo macOS */
+        .mac-buttons {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .mac-button.green {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            background-color: #f5f5fa;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function verifyPassword(module, link) {
+            const password = prompt("Ingrese la contraseña para " + module + ":");
+            if (password === "psicologa2024" && (module === "Psicología JVN" || module === "Psicología IE")) {
+                window.open(link, '_blank');
+            } else if (password === "sandy2024" && module === "Sesiones de Coaching") {
+                window.open(link, '_blank');
+            } else {
+                alert("Contraseña incorrecta");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>Administración de Calendarios Neumann</h1>
+    </div>
+
+    <div class="container">
+        <!-- Módulo 1 -->
+        <div class="game-card">
+            <div class="mac-buttons">
+                <div class="mac-button green" onclick="verifyPassword('Psicología JVN', 'https://docs.google.com/spreadsheets/d/1YSGnoBKgiGcReUdK-NwpioGpHI_Gzl_J-MJxmfYLu3E/edit?gid=804327624#gid=804327624')"></div>
+            </div>
+            <h2>📚 Psicología JVN</h2>
+            <p>Este módulo permite gestionar el calendario de actividades y registro de eventos para estudiantes del programa de Psicología en JVN.</p>
+            <button class="button-crud" onclick="verifyPassword('Psicología JVN', 'https://script.google.com/macros/s/AKfycbwHU47wy6oV5SsiIpvYSy2Ef3DdwnA15998KL3l9W7O64GTcdTXKBdyUXQ_o8u-Ruc/exec')">Ingresar al CRUD</button>
+            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0iUak8sWO4uXNFoB9Vu4tPnPhOxB1ZpG79ow3q_So2-P-Zj9xC16sNqvN_xegUWqE-jVDfIM0K', '_blank')">Abrir calendario</button>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="game-card">
+            <div class="mac-buttons">
+                <div class="mac-button green" onclick="verifyPassword('Psicología IE', 'https://docs.google.com/spreadsheets/d/1wef0w1Ll4arwJ5hz1ygZVsfNAOrJzcFRvuiRVfyD7D4/edit?gid=804327624#gid=804327624')"></div>
+            </div>
+            <h2>🏫 Psicología IE</h2>
+            <p>Gestión de calendario para actividades y eventos del programa de Psicología en el Instituto Educativo (IE), orientado a prácticas y seminarios.</p>
+            <button class="button-crud" onclick="verifyPassword('Psicología IE', 'https://script.google.com/macros/s/AKfycbwrGh-TvT9-gPiELpbOeFKmTffsUBCyrGUutR2E0nWsDQ6XdCLgQ__iFdxelbJtv3n1/exec')">Ingresar al CRUD</button>
+            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0KycJZhfHKeIGuf2-fcQ90Lcf6OnwSbB4MQhjSRV0tzakxElZL0am2A-7tPIxD3OVbOzg0C9JA', '_blank')">Abrir calendario</button>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="game-card">
+            <div class="mac-buttons">
+                <div class="mac-button green" onclick="verifyPassword('Sesiones de Coaching', 'https://docs.google.com/spreadsheets/d/1Fk-Efwcn5XLiPS7GWbTn6yH1TH25ALLsa0oLxOF2rVM/edit?gid=804327624#gid=804327624')"></div>
+            </div>
+            <h2>💼 Sesiones de Coaching</h2>
+            <p>Este módulo organiza el calendario de sesiones de coaching individual y grupal, orientadas al desarrollo de habilidades de autogestión y liderazgo.</p>
+            <button class="button-crud" onclick="verifyPassword('Sesiones de Coaching', 'https://script.google.com/macros/s/AKfycbwCHjJurhV7Q28C_REdwnwK1zUQP6CQdfiadjVkN4B3MjHAwWD29cY0lpxROVAfdb-b/exec')">Ingresar al CRUD</button>
+            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1f1uTVV5CSL0ZtEC46k0aXpW7OIv-OkpzQwUM6iE4-o4S_MpIJw2hAfAlvhVmoVuxCtRqlcRBx', '_blank')">Abrir calendario</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Derechos Reservados. Instituto de Educación Superior Tecnológico John Von Neumann.</p>
+    </footer>
+
+</body>
+</html>
