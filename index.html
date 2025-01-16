@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Calendarios Neumann</title>
+    <title>Calendarios de Reservas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos básicos */
@@ -136,57 +136,34 @@
             margin-top: 40px;
         }
     </style>
-    <script>
-        function verifyPassword(module, link) {
-            const password = prompt("Ingrese la contraseña para " + module + ":");
-            if (password === "psicologa2024" && (module === "Psicología JVN" || module === "Psicología IE")) {
-                window.open(link, '_blank');
-            } else if (password === "sandy2024" && module === "Sesiones de Coaching") {
-                window.open(link, '_blank');
-            } else {
-                alert("Contraseña incorrecta");
-            }
-        }
-    </script>
 </head>
 <body>
 
     <div class="header-container">
-        <h1>Administración de Calendarios Neumann</h1>
+        <h1>Calendarios de Reservas</h1>
     </div>
 
     <div class="container">
-        <!-- Módulo 1 -->
+        <!-- Módulo 1: Reservas IN -->
         <div class="game-card">
             <div class="mac-buttons">
-                <div class="mac-button green" onclick="verifyPassword('Psicología JVN', 'https://docs.google.com/spreadsheets/d/1YSGnoBKgiGcReUdK-NwpioGpHI_Gzl_J-MJxmfYLu3E/edit?gid=804327624#gid=804327624')"></div>
+                <div class="mac-button green" onclick="window.open('https://docs.google.com/spreadsheets/d/1z7BAXbJUrzNFRYz2JzaQdZZCMOARWcP-LYhiuFg_ZcY/edit?gid=0#gid=0', '_blank')"></div>
             </div>
-            <h2>📚 Psicología JVN</h2>
-            <p>Este módulo permite gestionar el calendario de actividades y registro de eventos para estudiantes del programa de Psicología en JVN.</p>
-            <button class="button-crud" onclick="verifyPassword('Psicología JVN', 'https://script.google.com/macros/s/AKfycbwz5mHDw3FmBdm1Fg6zVU_ICyYxT_WcinECPujcC06nEgwzDvB1TYOShnT0uJjWlksd/exec')">Ingresar al CRUD</button>
-            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0iUak8sWO4uXNFoB9Vu4tPnPhOxB1ZpG79ow3q_So2-P-Zj9xC16sNqvN_xegUWqE-jVDfIM0K', '_blank')">Abrir calendario</button>
+            <h2>📚 Reservas IN</h2>
+            <p>Este módulo permite gestionar las reservas de espacios y recursos para el programa IN. Organiza y visualiza las reservas de manera eficiente.</p>
+            <button class="button-crud" onclick="window.open('https://script.google.com/macros/s/AKfycbw2uwEXNzxQEni4RaruQ9Dk8X39_LJ3XUkxKhc448QXdK89m65TrmHhz4adFOg7Rns/exec', '_blank')">Ingresar al CRUD</button>
+            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3ahnfcdNYuMj3IykB2F9-8mD6vjjhU8XtY6qJ1IYUn8bfdnESPq3M_wqEgu-14e4E22qnzxT7-', '_blank')">Abrir calendario</button>
         </div>
 
-        <!-- Módulo 2 -->
+        <!-- Módulo 2: Reservas IE -->
         <div class="game-card">
             <div class="mac-buttons">
-                <div class="mac-button green" onclick="verifyPassword('Psicología IE', 'https://docs.google.com/spreadsheets/d/1wef0w1Ll4arwJ5hz1ygZVsfNAOrJzcFRvuiRVfyD7D4/edit?gid=804327624#gid=804327624')"></div>
+                <div class="mac-button green" onclick="window.open('https://docs.google.com/spreadsheets/d/180iTllkqoO5A3aykXQX6UbJR6CURsLHHsDOkxGmq2tE/edit?gid=0#gid=0', '_blank')"></div>
             </div>
-            <h2>🏫 Psicología IE</h2>
-            <p>Gestión de calendario para actividades y eventos del programa de Psicología en el Instituto Educativo (IE), orientado a prácticas y seminarios.</p>
-            <button class="button-crud" onclick="verifyPassword('Psicología IE', 'https://script.google.com/macros/s/AKfycby_EF5a2_vNsU1LnQi_4ClvH-mOZnlJM0pFoVRmiq_klqJK5VYubhFQV99gR9bdGvNB/exec')">Ingresar al CRUD</button>
-            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0KycJZhfHKeIGuf2-fcQ90Lcf6OnwSbB4MQhjSRV0tzakxElZL0am2A-7tPIxD3OVbOzg0C9JA', '_blank')">Abrir calendario</button>
-        </div>
-
-        <!-- Módulo 3 -->
-        <div class="game-card">
-            <div class="mac-buttons">
-                <div class="mac-button green" onclick="verifyPassword('Sesiones de Coaching', 'https://docs.google.com/spreadsheets/d/1Fk-Efwcn5XLiPS7GWbTn6yH1TH25ALLsa0oLxOF2rVM/edit?gid=804327624#gid=804327624')"></div>
-            </div>
-            <h2>💼 Sesiones de Coaching</h2>
-            <p>Este módulo organiza el calendario de sesiones de coaching individual y grupal, orientadas al desarrollo de habilidades de autogestión y liderazgo.</p>
-            <button class="button-crud" onclick="verifyPassword('Sesiones de Coaching', 'https://script.google.com/macros/s/AKfycbwtmFuIJu8nefpyIlf5X-OXNx6LMr2vfEVdqNgHEMUxwKIFJNeNzJ97nxUZsr9G0O6x/exec')">Ingresar al CRUD</button>
-            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1f1uTVV5CSL0ZtEC46k0aXpW7OIv-OkpzQwUM6iE4-o4S_MpIJw2hAfAlvhVmoVuxCtRqlcRBx', '_blank')">Abrir calendario</button>
+            <h2>🏫 Reservas IE</h2>
+            <p>Gestión de reservas para espacios y recursos en el Instituto Educativo (IE). Organiza y controla las reservas de manera eficaz.</p>
+            <button class="button-crud" onclick="window.open('https://script.google.com/macros/s/AKfycbyoUq_BF7PxVEnP0qSXR3nudUdgY8S92zA_z7fiCm6G8F3Oeyr_c6Nuoehz7ajRCxuiAg/exec', '_blank')">Ingresar al CRUD</button>
+            <button class="button-calendar" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1MK7zUdUXfo9T5ZvzFb7nI1V_06fNIcCECt9QZ0fPkBmVI9PqpPFcXH8nKUDReuhG6wZjcWm5V', '_blank')">Abrir calendario</button>
         </div>
     </div>
 
